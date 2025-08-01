@@ -2,41 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Minimalistisches Design System für bakkali.io - Alle Farben MÜSSEN HSL sein */
+/* Design System "Dar EL Fikra" für bakkali.io - Tech-orientiert & Minimalistisch */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    --background: 250 250% 99%;
+    --foreground: 210 22% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 210 22% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 210 22% 15%;
 
-    --primary: 0 0% 15%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 210 22% 15%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 0 0% 96%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 22% 15%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 0 0% 96%;
-    --accent-foreground: 0 0% 15%;
+    --accent: 159 69% 52%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 15%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 159 69% 52%;
 
-    /* Minimale Schatten */
-    --shadow-minimal: 0 1px 3px 0 hsl(0 0% 0% / 0.1);
+    /* Dar EL Fikra Palette */
+    --dar-primary: 210 22% 15%;      /* #1a202c */
+    --dar-accent: 159 69% 52%;       /* #48bb78 */
+    --dar-neutral-50: 210 40% 98%;   /* #f7fafc */
+    --dar-neutral-100: 220 14% 93%;  /* #edf2f7 */
+    --dar-neutral-200: 218 11% 85%;  /* #e2e8f0 */
+    --dar-neutral-800: 215 25% 27%;  /* #2d3748 */
+
+    /* Tech-Design Shadows */
+    --shadow-minimal: 0 1px 3px 0 hsl(0 0% 0% / 0.08);
     --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+    --shadow-focus: 0 0 0 3px hsl(159 69% 52% / 0.1);
 
     --radius: 0.5rem;
 

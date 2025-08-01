@@ -12,12 +12,22 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+				DEFAULT: '1.5rem',
+				sm: '2rem',
+				lg: '3rem',
+				xl: '4rem',
+				'2xl': '5rem',
+			},
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1200px'
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Inter', 'system-ui', 'sans-serif'],
+				mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +62,16 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				dar: {
+					primary: 'hsl(var(--dar-primary))',
+					accent: 'hsl(var(--dar-accent))',
+					neutral: {
+						50: 'hsl(var(--dar-neutral-50))',
+						100: 'hsl(var(--dar-neutral-100))',
+						200: 'hsl(var(--dar-neutral-200))',
+						800: 'hsl(var(--dar-neutral-800))',
+					}
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -62,6 +82,10 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			spacing: {
+				'18': '4.5rem',
+				'88': '22rem',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -103,7 +127,16 @@ export default {
 			},
 			boxShadow: {
 				'minimal': 'var(--shadow-minimal)',
-				'card': 'var(--shadow-card)'
+				'card': 'var(--shadow-card)',
+				'focus': 'var(--shadow-focus)'
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						'line-height': '1.6',
+						'letter-spacing': '-0.01em',
+					}
+				}
 			}
 		}
 	},
