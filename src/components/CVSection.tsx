@@ -1,25 +1,25 @@
 const CVSection = () => {
   const experience = [
     {
-      period: "2018 - Heute",
+      period: "seit 2019",
       title: "System Operations Engineer",
       company: "Cyberdyne IT GmbH",
-      description: "Verantwortung für IT-Infrastruktur, Endpoint Management und Monitoring-Systeme. Entwicklung von PowerShell-Automatisierungen und DevOps-Workflows."
+      description: "Verantwortung für IT-Infrastruktur, Endpoint Management und Monitoring-Systeme. Entwicklung von PowerShell-Automatisierungen und strukturierte Lösungsansätze."
     },
     {
-      period: "2017 - 2018",
-      title: "IT-Consultant",
-      company: "Ditcon",
-      description: "Beratung und Umsetzung von IT-Lösungen für mittelständische Unternehmen mit Fokus auf Systemintegration und Prozessoptimierung."
+      period: "2017 - 2019",
+      title: "IT-Spezialist",
+      company: "Ditcon GmbH",
+      description: "Systemintegration und IT-Lösungen für mittelständische Unternehmen mit Fokus auf Sicherheit und Prozessoptimierung."
     },
     {
       period: "2016 - 2017",
-      title: "Freelance IT-Spezialist",
+      title: "IT-Generalist",
       company: "Bluehex (freiberuflich)",
-      description: "Entwicklung maßgeschneiderter IT-Lösungen und Systemadministration für verschiedene Kundenprojekte."
+      description: "Entwicklung maßgeschneiderter IT-Lösungen und umfassende Systemadministration für verschiedene Kundenprojekte."
     },
     {
-      period: "2015 - 2016",
+      period: "2014 - 2016",
       title: "IT-Administrator",
       company: "A.M Bauunternehmung UG (freiberuflich)",
       description: "Aufbau und Wartung der IT-Infrastruktur, Implementierung von Backup-Strategien und Netzwerk-Management."
@@ -27,16 +27,15 @@ const CVSection = () => {
   ];
 
   const skills = [
-    "PowerShell", "Bash Scripting", "Python", "System Administration", 
-    "Endpoint Management", "Network Monitoring", "DevOps", "Automation",
-    "IT Infrastructure", "Windows Server", "Linux", "Active Directory",
-    "SCCM", "Group Policy", "Backup & Recovery", "Cloud Computing"
+    "PowerShell", "Endpoint Management", "System Administration", "Monitoring",
+    "Automation", "IT Infrastructure", "Windows Server", "Azure AD",
+    "Microsoft 365", "Intune", "Git", "Datto RMM"
   ];
 
   const tools = [
-    "Microsoft SCCM", "PowerShell ISE", "Nagios", "Zabbix", "PRTG", "Wireshark",
-    "VMware vSphere", "Hyper-V", "Azure", "AWS", "Git", "Jenkins",
-    "Docker", "Ansible", "Terraform", "ServiceNow", "ITSM Tools"
+    "PowerShell", "Microsoft Intune", "Datto RMM", "Azure AD", "Microsoft 365",
+    "Windows Server", "Git", "Monitoring-Frameworks", "PRTG", "Nagios",
+    "PowerShell ISE", "Azure Portal", "Office 365 Admin"
   ];
 
   return (
@@ -45,8 +44,13 @@ const CVSection = () => {
         
         {/* Überschrift */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-4">Lebenslauf</h2>
-          <div className="w-12 h-0.5 bg-dar-accent mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-6">Über mich</h2>
+          <div className="w-12 h-0.5 bg-dar-accent mx-auto mb-8"></div>
+          <p className="max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed">
+            System Operations Engineer mit über sechs Jahren Erfahrung in der IT-Branche. 
+            Mein Fokus liegt auf Endpoint Management, Monitoring und Automatisierung mit PowerShell. 
+            Ich arbeite strukturiert, sicherheitsbewusst und lösungsorientiert.
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-16">
