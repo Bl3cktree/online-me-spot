@@ -1,34 +1,42 @@
 const CVSection = () => {
   const experience = [
     {
-      period: "2022 - Heute",
-      title: "Senior Full-Stack Developer",
-      company: "TechCorp GmbH",
-      description: "Entwicklung und Wartung von Enterprise-Webanwendungen mit React, Node.js und AWS. Führung eines 5-köpfigen Entwicklerteams."
+      period: "2018 - Heute",
+      title: "System Operations Engineer",
+      company: "Cyberdyne IT GmbH",
+      description: "Verantwortung für IT-Infrastruktur, Endpoint Management und Monitoring-Systeme. Entwicklung von PowerShell-Automatisierungen und DevOps-Workflows."
     },
     {
-      period: "2020 - 2022",
-      title: "Frontend Developer",
-      company: "Digital Agency",
-      description: "Responsive Webentwicklung und UI/UX-Implementierung für verschiedene Kundenprojekte mit modernen Frameworks."
+      period: "2017 - 2018",
+      title: "IT-Consultant",
+      company: "Ditcon",
+      description: "Beratung und Umsetzung von IT-Lösungen für mittelständische Unternehmen mit Fokus auf Systemintegration und Prozessoptimierung."
     },
     {
-      period: "2018 - 2020",
-      title: "Junior Developer",
-      company: "StartupXYZ",
-      description: "Mitarbeit an der Entwicklung einer SaaS-Plattform von der MVP-Phase bis zur erfolgreichen Skalierung."
+      period: "2016 - 2017",
+      title: "Freelance IT-Spezialist",
+      company: "Bluehex (freiberuflich)",
+      description: "Entwicklung maßgeschneiderter IT-Lösungen und Systemadministration für verschiedene Kundenprojekte."
+    },
+    {
+      period: "2015 - 2016",
+      title: "IT-Administrator",
+      company: "A.M Bauunternehmung UG (freiberuflich)",
+      description: "Aufbau und Wartung der IT-Infrastruktur, Implementierung von Backup-Strategien und Netzwerk-Management."
     }
   ];
 
   const skills = [
-    "JavaScript", "TypeScript", "React", "Next.js", "Vue.js", "Svelte",
-    "Node.js", "Python", "Go", "PostgreSQL", "MongoDB", "Redis",
-    "AWS", "Docker", "Kubernetes", "GraphQL", "REST APIs", "WebSockets"
+    "PowerShell", "Bash Scripting", "Python", "System Administration", 
+    "Endpoint Management", "Network Monitoring", "DevOps", "Automation",
+    "IT Infrastructure", "Windows Server", "Linux", "Active Directory",
+    "SCCM", "Group Policy", "Backup & Recovery", "Cloud Computing"
   ];
 
   const tools = [
-    "VS Code", "WebStorm", "Figma", "Linear", "Notion", "Postman", 
-    "Docker Desktop", "AWS Console", "Vercel", "GitHub", "GitLab", "Slack"
+    "Microsoft SCCM", "PowerShell ISE", "Nagios", "Zabbix", "PRTG", "Wireshark",
+    "VMware vSphere", "Hyper-V", "Azure", "AWS", "Git", "Jenkins",
+    "Docker", "Ansible", "Terraform", "ServiceNow", "ITSM Tools"
   ];
 
   return (
