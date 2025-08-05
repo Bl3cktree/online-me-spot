@@ -3,35 +3,30 @@ import { ExternalLink, Github } from "lucide-react";
 const ProjectSection = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Vollständige E-Commerce-Lösung mit React, Node.js und Stripe-Integration. Verarbeitet täglich über 1.000 Transaktionen mit optimierter Performance.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
-      github: "github.com/bakkali/ecommerce-platform",
-      demo: "ecommerce-demo.bakkali.io",
-      status: "Production"
+      title: "Geoelektrik-Wassermessung",
+      description: "Hardware-basiertes System zur Messung von Grundwasserpegeln mittels geoelektrischer Verfahren. Entwicklung der Datenauswertung in Python mit statistischer Analyse und Visualisierung der Messergebnisse.",
+      tech: ["Python", "Hardware Integration", "Datenanalyse", "Matplotlib"],
+      status: "Forschungsprojekt"
     },
     {
-      title: "Task Management SaaS",
-      description: "Kollaborative Projektmanagement-Anwendung mit Echtzeit-Updates, Team-Funktionen und erweiterten Analytics für moderne Teams.",
-      tech: ["Next.js", "TypeScript", "MongoDB", "WebSockets", "Vercel"],
-      github: "github.com/bakkali/task-manager",
-      demo: "tasks.bakkali.io",
-      status: "Beta"
+      title: "PowerShell Monitoring Framework",
+      description: "Umfassendes Monitoring-System für die IT-Infrastruktur bei Cyberdyne IT. Automatisierte Überwachung, intelligentes Alert-Handling und Integration in bestehende ITSM-Workflows.",
+      tech: ["PowerShell", "Windows Server", "Alert Management", "Automation"],
+      status: "Produktiv"
     },
     {
-      title: "Analytics Dashboard",
-      description: "Business Intelligence Dashboard mit interaktiven Charts, Real-Time Data Processing und customizable Reports für Datenvisualisierung.",
-      tech: ["Vue.js", "Python", "FastAPI", "D3.js", "Docker"],
-      github: "github.com/bakkali/analytics-dashboard",
-      demo: "analytics.bakkali.io",
-      status: "Completed"
+      title: "Visuelles Musikfrequenzsystem",
+      description: "DIY-Projekt zur Visualisierung von Musikfrequenzen durch Laser-Projektion. Verwendung von Membrane und Spiegeln zur Erzeugung dynamischer Lichtmuster basierend auf Audio-Input.",
+      tech: ["Hardware Design", "Audio Processing", "Optik", "DIY Electronics"],
+      status: "Experimentell"
     }
   ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Production': return 'bg-dar-accent text-white';
-      case 'Beta': return 'bg-blue-500 text-white';
+      case 'Produktiv': return 'bg-dar-accent text-white';
+      case 'Forschungsprojekt': return 'bg-blue-500 text-white';
+      case 'Experimentell': return 'bg-orange-500 text-white';
       default: return 'bg-dar-neutral-200 text-dar-neutral-800';
     }
   };
@@ -90,27 +85,12 @@ const ProjectSection = () => {
                 </div>
               </div>
 
-              {/* Footer Links */}
+              {/* Footer */}
               <div className="px-8 pb-8 pt-4 border-t border-dar-neutral-200">
-                <div className="flex gap-4 text-sm">
-                  <a 
-                    href={`https://${project.github}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-dar-primary transition-colors"
-                  >
-                    <Github className="w-4 h-4" />
-                    <span className="font-mono">Code</span>
-                  </a>
-                  <a 
-                    href={`https://${project.demo}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-muted-foreground hover:text-dar-accent transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    <span className="font-mono">Demo</span>
-                  </a>
+                <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider">
+                  {project.status === 'Produktiv' ? 'Im produktiven Einsatz' : 
+                   project.status === 'Forschungsprojekt' ? 'Wissenschaftliches Projekt' : 
+                   'Experimenteller Aufbau'}
                 </div>
               </div>
             </div>
