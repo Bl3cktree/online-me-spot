@@ -47,7 +47,7 @@ const CVSection = () => {
           <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-6">Über mich</h2>
           <div className="w-12 h-0.5 bg-dar-accent mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed">
-            System Operations Engineer mit über sechs Jahren Erfahrung in der IT-Branche. 
+            System Operations Engineer mit über 15 Jahren Erfahrung in der IT-Branche. 
             Mein Fokus liegt auf Endpoint Management, Monitoring und Automatisierung mit PowerShell. 
             Ich arbeite strukturiert, sicherheitsbewusst und lösungsorientiert.
           </p>

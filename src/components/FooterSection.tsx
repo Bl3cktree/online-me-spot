@@ -19,7 +19,7 @@ const FooterSection = () => {
             
             {/* Email */}
             <a 
-              href="mailto:kontakt@bakkali.io"
+              href="mailto:contact@bakkali.io"
               className="group p-8 bg-card border border-dar-neutral-200 hover:border-dar-accent transition-all duration-300 hover:shadow-card"
             >
               <div className="flex items-center gap-4">
@@ -29,7 +29,7 @@ const FooterSection = () => {
                 <div>
                   <div className="text-sm font-mono text-dar-neutral-800 mb-1">Email</div>
                   <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors">
-                    kontakt@bakkali.io
+                    contact@bakkali.io
                   </div>
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors" />
@@ -50,7 +50,7 @@ const FooterSection = () => {
                 <div>
                   <div className="text-sm font-mono text-dar-neutral-800 mb-1">LinkedIn</div>
                   <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors">
-                    /in/bakkali
+                    /in/younes-bakkali-809454127/
                   </div>
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors" />
@@ -78,7 +78,7 @@ const FooterSection = () => {
             </a>
           </div>
           <p className="text-sm font-mono text-dar-neutral-800">
-            © 2024 bakkali.io — Built with attention to detail
+            © 2025 bakkali.io — Built with attention to detail
           </p>
         </div>
       </div>
