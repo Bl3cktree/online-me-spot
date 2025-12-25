@@ -18,8 +18,6 @@ const IntroSection = () => {
         {/* Kurze Bio */}
         <div className="max-w-2xl mx-auto">
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
-            Spezialisiert auf moderne Webtechnologien und skalierbare Softwarelösungen.<br />
-            Verwandle komplexe Anforderungen in elegante, benutzerfreundliche Anwendungen.
           </p>
         </div>
         
