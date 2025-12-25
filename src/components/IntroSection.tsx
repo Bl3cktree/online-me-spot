@@ -12,7 +12,6 @@ const IntroSection = () => {
         
         {/* Claim/Slogan */}
         <p className="text-xl md:text-2xl text-dar-neutral-800 font-light tracking-wide">
-          Full-Stack Developer & Digital Architect
         </p>
         
         {/* Kurze Bio */}
