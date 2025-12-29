@@ -71,13 +71,13 @@ const FooterSection = () => {
         <div className="text-center mt-16 pt-8 border-t border-dar-neutral-200 space-y-4">
           <div className="flex justify-center items-center gap-6 text-sm">
             <a 
-              href="/legal" 
+              href="legal"
               className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors">
               Impressum & Datenschutz
             </a>
           </div>
           <p className="text-sm font-mono text-dar-neutral-800">
-            © 2025 bakkali.io — Built with attention to detail
+            © 2025 bakkali.io — Built with attention to detail‚
           </p>
         </div>
       </div>
