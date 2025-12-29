@@ -12,20 +12,16 @@ const IntroSection = () => {
         
         {/* Claim/Slogan */}
         <p className="text-xl md:text-2xl text-dar-neutral-800 font-light tracking-wide">
-<<<<<<< HEAD
-=======
           System Operations Engineer
->>>>>>> 23e1905 (final_mehr_erfahren_bug_fixed)
         </p>
         
         {/* Kurze Bio */}
         <div className="max-w-2xl mx-auto">
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
-<<<<<<< HEAD
-=======
+
             Ich komme aus dem Systembetrieb, denke in Automatisierung und arbeite mit einem klaren Ziel: 
             Komplexe IT soll einfach laufen.<br />
->>>>>>> 23e1905 (final_mehr_erfahren_bug_fixed)
+
           </p>
         </div>
 
