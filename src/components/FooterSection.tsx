@@ -38,7 +38,7 @@ const FooterSection = () => {
             
             {/* LinkedIn */}
             <a 
-              href="https://linkedin.com/in/bakkali"
+              href="https://linkedin.com/in/younes-bakkali-809454127/"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-8 bg-card border border-dar-neutral-200 hover:border-dar-accent transition-all duration-300 hover:shadow-card"
@@ -50,7 +50,7 @@ const FooterSection = () => {
                 <div>
                   <div className="text-sm font-mono text-dar-neutral-800 mb-1">LinkedIn</div>
                   <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors">
-                    /in/younes-bakkali-809454127/
+                    
                   </div>
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors" />
@@ -72,8 +72,7 @@ const FooterSection = () => {
           <div className="flex justify-center items-center gap-6 text-sm">
             <a 
               href="/legal" 
-              className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors"
-            >
+              className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors">
               Impressum & Datenschutz
             </a>
           </div>

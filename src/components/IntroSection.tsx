@@ -12,13 +12,23 @@ const IntroSection = () => {
         
         {/* Claim/Slogan */}
         <p className="text-xl md:text-2xl text-dar-neutral-800 font-light tracking-wide">
+<<<<<<< HEAD
+=======
+          System Operations Engineer
+>>>>>>> 23e1905 (final_mehr_erfahren_bug_fixed)
         </p>
         
         {/* Kurze Bio */}
         <div className="max-w-2xl mx-auto">
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed font-light">
+<<<<<<< HEAD
+=======
+            Ich komme aus dem Systembetrieb, denke in Automatisierung und arbeite mit einem klaren Ziel: 
+            Komplexe IT soll einfach laufen.<br />
+>>>>>>> 23e1905 (final_mehr_erfahren_bug_fixed)
           </p>
         </div>
+
         
         {/* Tech Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-dar-neutral-50 border border-dar-neutral-200 rounded-full">
@@ -28,8 +38,17 @@ const IntroSection = () => {
         
         {/* Minimaler CTA */}
         <div className="pt-8">
-          <a 
-            href="#cv" 
+          <a
+            href="#cv"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("cv");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+                // update the hash without jumping
+                window.history.pushState(null, "", "#cv");
+              }
+            }}
             className="inline-flex items-center gap-3 px-8 py-4 border border-dar-primary text-dar-primary hover:bg-dar-primary hover:text-white transition-all duration-300 focus:outline-none focus:shadow-focus group"
           >
             <span className="font-medium">Mehr erfahren</span>
