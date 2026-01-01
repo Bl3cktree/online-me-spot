@@ -1,4 +1,5 @@
 import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   return (
@@ -70,11 +71,11 @@ const FooterSection = () => {
         {/* Copyright & Legal Links */}
         <div className="text-center mt-16 pt-8 border-t border-dar-neutral-200 space-y-4">
           <div className="flex justify-center items-center gap-6 text-sm">
-            <a 
-              href="#/legal"
+            <Link
+              to="/legal"
               className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors">
               Impressum & Datenschutz
-            </a>
+            </Link>
           </div>
           <p className="text-sm font-mono text-dar-neutral-800">
             © 2026 bakkali.io — Built with attention to detail‚
