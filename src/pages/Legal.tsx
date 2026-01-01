@@ -193,7 +193,7 @@ const Legal = () => {
 
                   <div className="pt-4 border-t border-dar-neutral-200">
                     <p className="text-xs text-dar-neutral-800">
-                      Stand: August 2025
+                      Stand: Januar 2026
                     </p>
                   </div>
                 </div>
