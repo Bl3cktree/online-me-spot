@@ -77,7 +77,7 @@ const FooterSection = () => {
             </a>
           </div>
           <p className="text-sm font-mono text-dar-neutral-800">
-            © 2025 bakkali.io — Built with attention to detail‚
+            © 2026 bakkali.io — Built with attention to detail‚
           </p>
         </div>
       </div>
