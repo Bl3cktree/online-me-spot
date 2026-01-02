@@ -29,9 +29,8 @@ const IntroSection = () => {
         {/* Tech Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-dar-neutral-50 border border-dar-neutral-200 rounded-full dark:bg-card dark:border-border">
           <span className="w-2 h-2 bg-dar-accent rounded-full animate-pulse"></span>
-          <span className="text-sm text-dar-neutral-800 font-mono dark:text-dar-neutral-100">Available for projects</span>
+          <span className="text-sm text-dar-neutral-800 font-mono dark:text-white">Available for projects</span>
         </div>
-        
         {/* Minimaler CTA */}
         <div className="pt-8">
           <a

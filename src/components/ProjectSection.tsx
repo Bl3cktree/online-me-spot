@@ -27,7 +27,7 @@ const ProjectSection = () => {
       case 'Produktiv': return 'bg-dar-accent text-white';
       case 'Forschungsprojekt': return 'bg-blue-500 text-white';
       case 'Experimentell': return 'bg-orange-500 text-white';
-      default: return 'bg-dar-neutral-200 text-dar-neutral-800';
+      default: return 'bg-dar-neutral-200 text-dar-neutral-800 dark:bg-dar-neutral-800 dark:text-white';
     }
   };
 
@@ -69,14 +69,14 @@ const ProjectSection = () => {
                 
                 {/* Tech Stack */}
                 <div className="space-y-3">
-                  <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider">
+                  <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider dark:text-white">
                     Tech Stack
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
                       <span 
                         key={tech} 
-                        className="text-xs px-2 py-1 bg-dar-neutral-100 text-dar-neutral-800 font-mono dark:bg-dar-neutral-800 dark:text-dar-neutral-100"
+                        className="text-xs px-2 py-1 bg-dar-neutral-100 text-dar-neutral-800 font-mono dark:bg-dar-neutral-800 dark:text-white"
                       >
                         {tech}
                       </span>

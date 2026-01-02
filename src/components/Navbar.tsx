@@ -19,15 +19,15 @@ const Navbar = () => {
           </div>
 
           <nav className="hidden md:flex items-center gap-4">
-            <Link to="/" className="text-sm text-dar-neutral-800 dark:text-dar-neutral-100 hover:underline">
+            <Link to="/" className="text-sm text-dar-neutral-800 dark:text-white hover:underline">
               Home
             </Link>
-            <Link to="/legal" className="text-sm text-dar-neutral-800 dark:text-dar-neutral-100 hover:underline">
+            <Link to="/legal" className="text-sm text-dar-neutral-800 dark:text-white hover:underline">
               Legal
             </Link>
             <button
               aria-label="Toggle dark mode"
-              className="p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-dar-neutral-100"
+              className="p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-white"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               {theme === "light" ? <Sun size={16} /> : <Moon size={16} />}
@@ -37,7 +37,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               aria-label="Toggle dark mode"
-              className="mr-2 p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-dar-neutral-100"
+              className="mr-2 p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-white"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
@@ -46,7 +46,7 @@ const Navbar = () => {
             <button
               aria-label="Open menu"
               onClick={() => setOpen((v) => !v)}
-              className="p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-dar-neutral-100"
+              className="p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-white"
             >
               {open ? <X size={18} /> : <Menu size={18} />}
             </button>
@@ -56,10 +56,10 @@ const Navbar = () => {
         {/* Mobile menu */}
         {open && (
           <div className="md:hidden py-2 flex flex-col gap-2">
-            <Link to="/" className="text-sm px-2 py-1 rounded hover:bg-muted text-dar-neutral-800 dark:text-dar-neutral-100" onClick={() => setOpen(false)}>
+            <Link to="/" className="text-sm px-2 py-1 rounded hover:bg-muted text-dar-neutral-800 dark:text-white" onClick={() => setOpen(false)}>
               Home
             </Link>
-            <Link to="/legal" className="text-sm px-2 py-1 rounded hover:bg-muted text-dar-neutral-800 dark:text-dar-neutral-100" onClick={() => setOpen(false)}>
+            <Link to="/legal" className="text-sm px-2 py-1 rounded hover:bg-muted text-dar-neutral-800 dark:text-white" onClick={() => setOpen(false)}>
               Legal
             </Link>
           </div>

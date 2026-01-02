@@ -20,19 +20,19 @@ const FooterSection = () => {
             {/* Email */}
             <a 
               href="mailto:contact@bakkali.io"
-              className="group p-8 bg-card border border-dar-neutral-200 hover:border-dar-accent transition-all duration-300 hover:shadow-card"
+              className="group p-8 bg-card border border-dar-neutral-200 hover:border-dar-accent transition-all duration-300 hover:shadow-card dark:border-border dark:bg-card"
             >
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-dar-accent text-white rounded-lg group-hover:scale-110 transition-transform">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-sm font-mono text-dar-neutral-800 mb-1">Email</div>
-                  <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors">
+                  <div className="text-sm font-mono text-dar-neutral-800 mb-1 dark:text-white">Email</div>
+                  <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors dark:text-white">
                     contact@bakkali.io
                   </div>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors dark:text-dar-neutral-100" />
+                <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors dark:text-white" />
               </div>
             </a>
             
@@ -48,19 +48,19 @@ const FooterSection = () => {
                   <Linkedin className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-sm font-mono text-dar-neutral-800 mb-1 dark:text-dar-neutral-100">LinkedIn</div>
-                  <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors">
+                  <div className="text-sm font-mono text-dar-neutral-800 mb-1 dark:text-white">LinkedIn</div>
+                  <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors dark:text-white">
                     
                   </div>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors dark:text-dar-neutral-100" />
+                <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors dark:text-white" />
               </div>
             </a>
           </div>
 
           {/* CTA Text */}
           <div className="text-center">
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed dark:text-muted-foreground">
               Bereit für Ihr nächstes Projekt?<br />
               Lassen Sie uns über Ihre Ideen sprechen.
             </p>
@@ -68,15 +68,15 @@ const FooterSection = () => {
         </div>
 
         {/* Copyright & Legal Links */}
-        <div className="text-center mt-16 pt-8 border-t border-dar-neutral-200 space-y-4">
+        <div className="text-center mt-16 pt-8 border-t border-dar-neutral-200 dark:border-border space-y-4">
           <div className="flex justify-center items-center gap-6 text-sm">
             <Link
               to="/legal"
-              className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors dark:text-dar-neutral-100">
+              className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors dark:text-white">
               Impressum & Datenschutz
             </Link>
           </div>
-          <p className="text-sm font-mono text-dar-neutral-800 dark:text-dar-neutral-100">
+          <p className="text-sm font-mono text-dar-neutral-800 dark:text-white">
             © 2026 bakkali.io — Built with attention to detail
           </p>
         </div>

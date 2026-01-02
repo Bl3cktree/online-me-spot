@@ -72,9 +72,9 @@ const CVSection = () => {
                         <h4 className="text-lg font-medium text-dar-primary dark:text-foreground">{job.title}</h4>
                         <p className="text-dar-accent font-medium">{job.company}</p>
                       </div>
-                      <div className="text-sm font-mono text-dar-neutral-800 bg-dar-neutral-100 px-3 py-1 rounded-full w-fit dark:bg-dar-neutral-800 dark:text-dar-neutral-100">
+                      <div className="text-sm font-mono text-dar-neutral-800 bg-dar-neutral-100 px-3 py-1 rounded-full w-fit dark:bg-dar-neutral-800 dark:text-white">
                         {job.period}
-                      </div>
+                      </div> 
                     </div>
                     <p className="text-muted-foreground leading-relaxed dark:text-muted-foreground">
                       {job.description}
