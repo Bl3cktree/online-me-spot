@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 
 const FooterSection = () => {
   return (
-    <footer className="py-24 bg-dar-neutral-50 border-t border-dar-neutral-200">
+    <footer className="py-24 bg-dar-neutral-50 border-t border-dar-neutral-200 dark:bg-card dark:border-border">
       <div className="container mx-auto">
         
         {/* Kontakt-Überschrift */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-4">Kontakt</h2>
-          <div className="w-12 h-0.5 bg-dar-accent mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-4 dark:text-foreground">Kontakt</h2>
         </div>
 
         {/* Kontakt-Info */}
@@ -33,7 +32,7 @@ const FooterSection = () => {
                     contact@bakkali.io
                   </div>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors" />
+                <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors dark:text-dar-neutral-100" />
               </div>
             </a>
             
@@ -49,12 +48,12 @@ const FooterSection = () => {
                   <Linkedin className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="text-sm font-mono text-dar-neutral-800 mb-1">LinkedIn</div>
+                  <div className="text-sm font-mono text-dar-neutral-800 mb-1 dark:text-dar-neutral-100">LinkedIn</div>
                   <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors">
                     
                   </div>
                 </div>
-                <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors" />
+                <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors dark:text-dar-neutral-100" />
               </div>
             </a>
           </div>
@@ -73,11 +72,11 @@ const FooterSection = () => {
           <div className="flex justify-center items-center gap-6 text-sm">
             <Link
               to="/legal"
-              className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors">
+              className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors dark:text-dar-neutral-100">
               Impressum & Datenschutz
             </Link>
           </div>
-          <p className="text-sm font-mono text-dar-neutral-800">
+          <p className="text-sm font-mono text-dar-neutral-800 dark:text-dar-neutral-100">
             © 2026 bakkali.io — Built with attention to detail
           </p>
         </div>

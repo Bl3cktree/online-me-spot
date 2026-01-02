@@ -39,12 +39,12 @@ const CVSection = () => {
   ];
 
   return (
-    <section id="cv" className="py-24 bg-dar-neutral-50">
+    <section id="cv" className="py-24 bg-dar-neutral-50 dark:bg-background">
       <div className="container mx-auto">
         
         {/* Überschrift */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-6">Über mich</h2>
+          <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-6 dark:text-foreground">Über mich</h2>
           <div className="w-12 h-0.5 bg-dar-accent mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed">
           System Operations Engineer mit über 15 Jahren Erfahrung in der IT-Branche. 
@@ -57,26 +57,26 @@ const CVSection = () => {
           
           {/* Berufserfahrung */}
           <div className="lg:col-span-2 space-y-12">
-            <h3 className="text-2xl font-medium text-dar-primary mb-8 pb-4 border-b border-dar-neutral-200">
+            <h3 className="text-2xl font-medium text-dar-primary mb-8 pb-4 border-b border-dar-neutral-200 dark:text-foreground dark:border-border">
               Berufserfahrung
             </h3>
             
             <div className="space-y-12">
               {experience.map((job, index) => (
-                <div key={index} className="relative pl-8 border-l-2 border-dar-neutral-200">
+                <div key={index} className="relative pl-8 border-l-2 border-dar-neutral-200 dark:border-border">
                   <div className="absolute -left-2 top-0 w-4 h-4 bg-dar-accent rounded-full"></div>
                   
                   <div className="space-y-3">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                       <div>
-                        <h4 className="text-lg font-medium text-dar-primary">{job.title}</h4>
+                        <h4 className="text-lg font-medium text-dar-primary dark:text-foreground">{job.title}</h4>
                         <p className="text-dar-accent font-medium">{job.company}</p>
                       </div>
-                      <div className="text-sm font-mono text-dar-neutral-800 bg-dar-neutral-100 px-3 py-1 rounded-full w-fit">
+                      <div className="text-sm font-mono text-dar-neutral-800 bg-dar-neutral-100 px-3 py-1 rounded-full w-fit dark:bg-dar-neutral-800 dark:text-dar-neutral-100">
                         {job.period}
                       </div>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed dark:text-muted-foreground">
                       {job.description}
                     </p>
                   </div>
@@ -90,14 +90,14 @@ const CVSection = () => {
             
             {/* Skills */}
             <div>
-              <h3 className="text-2xl font-medium text-dar-primary mb-8 pb-4 border-b border-dar-neutral-200">
+              <h3 className="text-2xl font-medium text-dar-primary mb-8 pb-4 border-b border-dar-neutral-200 dark:text-foreground dark:border-border">
                 Skills
               </h3>
               <div className="space-y-3">
                 {skills.map((skill, index) => (
                   <div key={skill} className="flex items-center gap-3 group">
                     <div className="w-1.5 h-1.5 bg-dar-accent rounded-full"></div>
-                    <span className="text-sm text-muted-foreground group-hover:text-dar-primary transition-colors">
+                    <span className="text-sm text-muted-foreground group-hover:text-dar-primary transition-colors dark:text-muted-foreground">
                       {skill}
                     </span>
                   </div>
@@ -107,14 +107,14 @@ const CVSection = () => {
 
             {/* Tools */}
             <div>
-              <h3 className="text-2xl font-medium text-dar-primary mb-8 pb-4 border-b border-dar-neutral-200">
+              <h3 className="text-2xl font-medium text-dar-primary mb-8 pb-4 border-b border-dar-neutral-200 dark:text-foreground dark:border-border">
                 Tools
               </h3>
               <div className="space-y-3">
                 {tools.map((tool, index) => (
                   <div key={tool} className="flex items-center gap-3 group">
-                    <div className="w-1.5 h-1.5 bg-dar-neutral-200 rounded-full group-hover:bg-dar-accent transition-colors"></div>
-                    <span className="text-sm font-mono text-muted-foreground group-hover:text-dar-primary transition-colors">
+                    <div className="w-1.5 h-1.5 bg-dar-neutral-200 rounded-full group-hover:bg-dar-accent transition-colors dark:bg-dar-neutral-800"></div>
+                    <span className="text-sm font-mono text-muted-foreground group-hover:text-dar-primary transition-colors dark:text-muted-foreground">
                       {tool}
                     </span>
                   </div>

@@ -35,8 +35,8 @@ const AboutSection = () => {
     <section className="py-20 bg-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-foreground mb-4">About Me</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl font-bold text-foreground mb-4 dark:text-foreground">About Me</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed dark:text-muted-foreground">
             I'm a passionate software engineer who loves turning complex problems into simple, 
             beautiful solutions. With a strong foundation in both frontend and backend development, 
             I bring ideas to life through code.
@@ -46,8 +46,8 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Story */}
           <div className="space-y-6 animate-slide-up">
-            <h3 className="text-2xl font-semibold text-foreground">My Journey</h3>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <h3 className="text-2xl font-semibold text-foreground dark:text-foreground">My Journey</h3>
+            <div className="space-y-4 text-muted-foreground leading-relaxed dark:text-muted-foreground">
               <p>
                 My journey in tech began 8 years ago when I discovered the power of code to solve 
                 real-world problems. Since then, I've had the privilege of working with startups 
@@ -61,10 +61,10 @@ const AboutSection = () => {
             </div>
 
             <div className="space-y-4">
-              <h4 className="text-lg font-medium text-foreground">Technical Skills</h4>
+              <h4 className="text-lg font-medium text-foreground dark:text-foreground">Technical Skills</h4>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
-                  <Badge key={skill} variant="secondary" className="bg-primary/10 text-primary">
+                  <Badge key={skill} variant="secondary" className="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-foreground">
                     {skill}
                   </Badge>
                 ))}
@@ -74,18 +74,18 @@ const AboutSection = () => {
 
           {/* Values */}
           <div className="space-y-6 animate-slide-up">
-            <h3 className="text-2xl font-semibold text-foreground">What Drives Me</h3>
+            <h3 className="text-2xl font-semibold text-foreground dark:text-foreground">What Drives Me</h3>
             <div className="grid gap-4">
               {values.map((value) => (
-                <Card key={value.title} className="border-border/50 shadow-card hover:shadow-lg transition-shadow duration-300">
+                <Card key={value.title} className="border-border/50 shadow-card hover:shadow-lg transition-shadow duration-300 dark:border-border/50">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="p-3 bg-gradient-primary rounded-lg">
                         <value.icon className="w-6 h-6 text-primary-foreground" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-2">{value.title}</h4>
-                        <p className="text-muted-foreground text-sm leading-relaxed">
+                        <h4 className="font-semibold text-foreground mb-2 dark:text-foreground">{value.title}</h4>
+                        <p className="text-muted-foreground text-sm leading-relaxed dark:text-muted-foreground">
                           {value.description}
                         </p>
                       </div>

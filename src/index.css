@@ -111,6 +111,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply pt-14 bg-background text-foreground;
   }
 }
