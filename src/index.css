@@ -102,6 +102,14 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Dar EL Fikra palette overrides for dark mode */
+    --dar-primary: 210 40% 98%;
+    --dar-accent: 159 69% 52%;
+    --dar-neutral-50: 240 5.9% 10%;
+    --dar-neutral-100: 240 5.9% 12%;
+    --dar-neutral-200: 217.2 32.6% 17.5%;
+    --dar-neutral-800: 210 22% 15%;
   }
 }
 
