@@ -27,7 +27,7 @@ const ProjectSection = () => {
       case 'Produktiv': return 'bg-dar-accent text-white';
       case 'Forschungsprojekt': return 'bg-blue-500 text-white';
       case 'Experimentell': return 'bg-orange-500 text-white';
-      default: return 'bg-dar-neutral-200 text-dar-neutral-800';
+      default: return 'bg-dar-neutral-200 text-dar-neutral-800 dark:bg-dar-neutral-800 dark:text-white';
     }
   };
 
@@ -37,7 +37,7 @@ const ProjectSection = () => {
         
         {/* Überschrift */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-4">Projekte</h2>
+          <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-4 dark:text-foreground">Projekte</h2>
           <div className="w-12 h-0.5 bg-dar-accent mx-auto"></div>
         </div>
 
@@ -46,7 +46,7 @@ const ProjectSection = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="bg-card border border-dar-neutral-200 hover:border-dar-accent transition-all duration-300 group"
+              className="bg-card border border-dar-neutral-200 hover:border-dar-accent transition-all duration-300 group dark:border-border"
             >
               
               {/* Header */}
@@ -54,7 +54,7 @@ const ProjectSection = () => {
                 
                 {/* Title & Status */}
                 <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-xl font-medium text-dar-primary group-hover:text-dar-accent transition-colors">
+                  <h3 className="text-xl font-medium text-dar-primary group-hover:text-dar-accent transition-colors dark:text-foreground">
                     {project.title}
                   </h3>
                   <span className={`text-xs px-2 py-1 rounded-full font-mono ${getStatusColor(project.status)}`}>
@@ -63,20 +63,20 @@ const ProjectSection = () => {
                 </div>
                 
                 {/* Beschreibung */}
-                <p className="text-muted-foreground leading-relaxed text-sm">
+                <p className="text-muted-foreground leading-relaxed text-sm dark:text-muted-foreground">
                   {project.description}
                 </p>
                 
                 {/* Tech Stack */}
                 <div className="space-y-3">
-                  <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider">
+                  <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider dark:text-white">
                     Tech Stack
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
                       <span 
                         key={tech} 
-                        className="text-xs px-2 py-1 bg-dar-neutral-100 text-dar-neutral-800 font-mono"
+                        className="text-xs px-2 py-1 bg-dar-neutral-100 text-dar-neutral-800 font-mono dark:bg-dar-neutral-800 dark:text-white"
                       >
                         {tech}
                       </span>
@@ -86,8 +86,8 @@ const ProjectSection = () => {
               </div>
 
               {/* Footer */}
-              <div className="px-8 pb-8 pt-4 border-t border-dar-neutral-200">
-                <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider">
+              <div className="px-8 pb-8 pt-4 border-t border-dar-neutral-200 dark:border-border">
+                <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider dark:text-muted-foreground">
                   {project.status === 'Produktiv' ? 'Im produktiven Einsatz' : 
                    project.status === 'Forschungsprojekt' ? 'Wissenschaftliches Projekt' : 
                    'Experimenteller Aufbau'}

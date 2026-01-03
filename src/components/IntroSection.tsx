@@ -4,14 +4,14 @@ const IntroSection = () => {
       <div className="max-w-4xl text-center space-y-12 animate-fade-in">
         {/* Name */}
         <div className="space-y-4">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-light text-dar-primary tracking-tight leading-none">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-light text-dar-primary tracking-tight leading-none dark:text-white">
             Bakkali
           </h1>
           <div className="w-16 h-0.5 bg-dar-accent mx-auto"></div>
         </div>
         
         {/* Claim/Slogan */}
-        <p className="text-xl md:text-2xl text-dar-neutral-800 font-light tracking-wide">
+        <p className="text-xl md:text-2xl text-dar-neutral-800 font-light tracking-wide dark:text-foreground">
           System Operations Engineer
         </p>
         
@@ -27,11 +27,10 @@ const IntroSection = () => {
 
         
         {/* Tech Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 bg-dar-neutral-50 border border-dar-neutral-200 rounded-full">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-dar-neutral-50 border border-dar-neutral-200 rounded-full dark:bg-card dark:border-border">
           <span className="w-2 h-2 bg-dar-accent rounded-full animate-pulse"></span>
-          <span className="text-sm text-dar-neutral-800 font-mono">Available for projects</span>
+          <span className="text-sm text-dar-neutral-800 font-mono dark:text-white">Available for projects</span>
         </div>
-        
         {/* Minimaler CTA */}
         <div className="pt-8">
           <a
@@ -45,7 +44,7 @@ const IntroSection = () => {
                 window.history.pushState(null, "", "#cv");
               }
             }}
-            className="inline-flex items-center gap-3 px-8 py-4 border border-dar-primary text-dar-primary hover:bg-dar-primary hover:text-white transition-all duration-300 focus:outline-none focus:shadow-focus group"
+            className="inline-flex items-center gap-3 px-8 py-4 border border-dar-primary text-dar-primary hover:bg-dar-primary hover:text-white transition-all duration-300 focus:outline-none focus:shadow-focus group dark:border-border dark:text-foreground dark:hover:bg-dar-accent dark:hover:text-white"
           >
             <span className="font-medium">Mehr erfahren</span>
             <span className="w-4 h-0.5 bg-current group-hover:w-6 transition-all duration-300"></span>

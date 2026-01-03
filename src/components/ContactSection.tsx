@@ -52,8 +52,8 @@ const ContactSection = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl font-bold text-foreground mb-4">Let's Work Together</h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-foreground mb-4 dark:text-foreground">Let's Work Together</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto dark:text-muted-foreground">
             I'm always interested in new opportunities and exciting projects. 
             Let's discuss how we can bring your ideas to life.
           </p>
