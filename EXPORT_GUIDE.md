@@ -1,5 +1,7 @@
 # Export-Guide für bakkali.io Landing Page
 
+> Farb-Tokens abgeglichen mit `src/index.css` (Stand: 2026-08). Akzent = Grün `159 69% 52%` (#48bb78), Primary = dunkles Slate `210 22% 15%` (#1a202c).
+
 ## 📋 Struktur-Übersicht
 
 ### Layout-Hierarchie
@@ -16,14 +18,14 @@
 ```css
 :root {
   /* Primary Colors */
-  --dar-primary: 220 14% 96%;
-  --dar-accent: 24 70% 52%;
+  --dar-primary: 210 22% 15%;
+  --dar-accent: 159 69% 52%;
   
   /* Neutral Colors */
-  --dar-neutral-50: 220 14% 96%;
-  --dar-neutral-100: 220 13% 91%;
-  --dar-neutral-200: 220 13% 83%;
-  --dar-neutral-800: 220 9% 46%;
+  --dar-neutral-50: 210 40% 98%;
+  --dar-neutral-100: 220 14% 93%;
+  --dar-neutral-200: 218 11% 85%;
+  --dar-neutral-800: 215 25% 27%;
 }
 ```
 
@@ -61,12 +63,12 @@ xl: 1280px  /* Large Desktop */
   <style>
     /* Dar EL Fikra Color Variables */
     :root {
-      --dar-primary: 220 14% 96%;
-      --dar-accent: 24 70% 52%;
-      --dar-neutral-50: 220 14% 96%;
-      --dar-neutral-100: 220 13% 91%;
-      --dar-neutral-200: 220 13% 83%;
-      --dar-neutral-800: 220 9% 46%;
+      --dar-primary: 210 22% 15%;
+      --dar-accent: 159 69% 52%;
+      --dar-neutral-50: 210 40% 98%;
+      --dar-neutral-100: 220 14% 93%;
+      --dar-neutral-200: 218 11% 85%;
+      --dar-neutral-800: 215 25% 27%;
     }
     
     .dar-primary { color: hsl(var(--dar-primary)); }
@@ -86,8 +88,8 @@ xl: 1280px  /* Large Desktop */
 
 **Klassen-Mapping:**
 ```
-dar-primary-text    → Text Color: hsl(220, 14%, 96%)
-dar-accent-bg       → Background: hsl(24, 70%, 52%)
+dar-primary-text    → Text Color: hsl(210, 22%, 15%)
+dar-accent-bg       → Background: hsl(159, 69%, 52%)
 section-padding     → Padding: 6rem 0 (py-24)
 container-max       → Max Width: 1200px, Center
 ```
@@ -97,8 +99,8 @@ container-max       → Max Width: 1200px, Center
 **Design Tokens für Figma:**
 ```
 Primary Colors:
-- dar-primary: #1A1D21
-- dar-accent: #D2691E
+- dar-primary: #1a202c
+- dar-accent: #48bb78
 
 Text Styles:
 - Hero/Display: Inter, 96px, Light

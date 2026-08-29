@@ -5,12 +5,12 @@ import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       <IntroSection />
       <CVSection />
       <ProjectSection />
       <FooterSection />
-    </div>
+    </main>
   );
 };
 

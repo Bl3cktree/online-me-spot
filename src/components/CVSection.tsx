@@ -29,13 +29,17 @@ const CVSection = () => {
   const skills = [
     "PowerShell", "Endpoint Management", "System Administration", "Monitoring",
     "Automation", "IT Infrastructure", "Windows Server", "Azure AD",
-    "Microsoft 365", "Intune", "Git", "Datto RMM"
+    "Microsoft 365", "Intune", "Git", "Datto RMM",
+    "Virtualisierung (Hyper-V / ESXi)", "Netzwerk & Switching (Aruba / HPE)",
+    "IT-Security", "Schwachstellenmanagement", "NIS2-Umsetzung"
   ];
 
   const tools = [
     "PowerShell", "Microsoft Intune", "Datto RMM", "Azure AD", "Microsoft 365",
     "Windows Server", "Git", "Monitoring-Frameworks", "PRTG", "Nagios",
-    "PowerShell ISE", "Azure Portal", "Office 365 Admin"
+    "PowerShell ISE", "Azure Portal", "Office 365 Admin",
+    "Hyper-V", "VMware ESXi / vSphere", "Aruba Switches", "HPE Switches",
+    "vektorscan.com"
   ];
 
   return (
@@ -47,7 +51,7 @@ const CVSection = () => {
           <h2 className="text-4xl md:text-5xl font-light text-dar-primary mb-6 dark:text-foreground">Über mich</h2>
           <div className="w-12 h-0.5 bg-dar-accent mx-auto mb-8"></div>
           <p className="max-w-3xl mx-auto text-lg text-muted-foreground leading-relaxed">
-          System Operations Engineer mit über 15 Jahren Erfahrung in der IT-Branche. 
+          System Operations Engineer mit über 15 Jahren Erfahrung in der IT-Branche.
           Mein Fokus liegt auf Endpoint Management, Monitoring und Automatisierung. 
           Ich arbeite strukturiert, sicherheitsbewusst und lösungsorientiert.
           </p>

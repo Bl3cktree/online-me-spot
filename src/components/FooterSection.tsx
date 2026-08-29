@@ -18,7 +18,7 @@ const FooterSection = () => {
           <div className="grid sm:grid-cols-2 gap-6 mb-16">
             
             {/* Email */}
-            <a 
+            <a
               href="mailto:contact@bakkali.io"
               className="group p-8 bg-card border border-dar-neutral-200 hover:border-dar-accent transition-all duration-300 hover:shadow-card dark:border-border dark:bg-card"
             >
@@ -44,13 +44,13 @@ const FooterSection = () => {
               className="group p-8 bg-card border border-dar-neutral-200 hover:border-dar-accent transition-all duration-300 hover:shadow-card"
             >
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-dar-primary text-white rounded-lg group-hover:scale-110 transition-transform">
+                <div className="p-3 bg-dar-neutral-800 text-white rounded-lg group-hover:scale-110 transition-transform">
                   <Linkedin className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="text-sm font-mono text-dar-neutral-800 mb-1 dark:text-white">LinkedIn</div>
                   <div className="text-dar-primary font-medium group-hover:text-dar-accent transition-colors dark:text-white">
-                    
+                    Younes Bakkali
                   </div>
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-dar-neutral-800 ml-auto group-hover:text-dar-accent transition-colors dark:text-white" />
@@ -69,7 +69,14 @@ const FooterSection = () => {
 
         {/* Copyright & Legal Links */}
         <div className="text-center mt-16 pt-8 border-t border-dar-neutral-200 dark:border-border space-y-4">
-          <div className="flex justify-center items-center gap-6 text-sm">
+          <div className="flex justify-center items-center flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a
+              href="https://vektorscan.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors dark:text-white">
+              vektorscan.com
+            </a>
             <Link
               to="/legal"
               className="font-mono text-dar-neutral-800 hover:text-dar-accent transition-colors dark:text-white">

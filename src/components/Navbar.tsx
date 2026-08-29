@@ -1,22 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "next-themes";
 import { Sun, Moon, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const themeHook = useTheme();
-  const theme = themeHook?.theme ?? "system";
-  const setTheme = themeHook?.setTheme ?? (() => {});
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  const isDark = resolvedTheme === "dark";
+  const toggleTheme = () => setTheme(isDark ? "light" : "dark");
+  const themeLabel = isDark ? "Zu hellem Modus wechseln" : "Zu dunklem Modus wechseln";
+
+  // Vor dem Mount kennen wir das aufgelöste Theme noch nicht -> Platzhalter, um Icon-Flackern zu vermeiden.
+  const themeIcon = !mounted ? (
+    <span className="block w-4 h-4" />
+  ) : isDark ? (
+    <Sun size={16} />
+  ) : (
+    <Moon size={16} />
+  );
 
   return (
     <header className="w-full fixed top-0 z-40 backdrop-blur bg-background/60 border-b border-border">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
-          <div className="flex items-center gap-4">
-            <Link to="/" className="text-lg font-semibold text-dar-neutral-800 dark:text-dar-neutral-100">
-            </Link>
-          </div>
+          <Link
+            to="/"
+            className="font-mono text-sm font-semibold text-dar-neutral-800 hover:text-dar-accent transition-colors dark:text-white"
+          >
+            bakkali.io
+          </Link>
 
           <nav className="hidden md:flex items-center gap-4">
             <Link to="/" className="text-sm text-dar-neutral-800 dark:text-white hover:underline">
@@ -26,25 +42,31 @@ const Navbar = () => {
               Legal
             </Link>
             <button
-              aria-label="Toggle dark mode"
+              type="button"
+              aria-label={themeLabel}
+              aria-pressed={isDark}
               className="p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-white"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={toggleTheme}
             >
-              {theme === "light" ? <Sun size={16} /> : <Moon size={16} />}
+              {themeIcon}
             </button>
           </nav>
 
           <div className="md:hidden flex items-center">
             <button
-              aria-label="Toggle dark mode"
+              type="button"
+              aria-label={themeLabel}
+              aria-pressed={isDark}
               className="mr-2 p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-white"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={toggleTheme}
             >
-              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+              {themeIcon}
             </button>
 
             <button
-              aria-label="Open menu"
+              type="button"
+              aria-label={open ? "Menü schließen" : "Menü öffnen"}
+              aria-expanded={open}
               onClick={() => setOpen((v) => !v)}
               className="p-2 rounded hover:bg-muted text-dar-neutral-800 dark:text-white"
             >

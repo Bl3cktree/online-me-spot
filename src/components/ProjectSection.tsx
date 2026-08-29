@@ -1,7 +1,23 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+
+type Project = {
+  title: string;
+  description: string;
+  tech: string[];
+  status: string;
+  url?: string;
+};
 
 const ProjectSection = () => {
-  const projects = [
+  const projects: Project[] = [
+    {
+      title: "vektorscan.com",
+      description:
+        "Eigene SaaS-Plattform für automatisiertes Schwachstellen-Scanning und Angriffsvektor-Analyse. Prüft IT-Systeme kontinuierlich auf bekannte Sicherheitslücken (CVE) und unterstützt Unternehmen bei der NIS2-konformen Dokumentation und dem Reporting.",
+      tech: ["Schwachstellen-Scanning", "NIS2", "SaaS", "Automatisierung"],
+      status: "Produktiv",
+      url: "https://vektorscan.com",
+    },
     {
       title: "Geoelektrik-Wassermessung",
       description: "Hardware-basiertes System zur Messung von Grundwasserpegeln mittels geoelektrischer Verfahren. Entwicklung der Datenauswertung in Python mit statistischer Analyse und Visualisierung der Messergebnisse.",
@@ -42,7 +58,7 @@ const ProjectSection = () => {
         </div>
 
         {/* Projekt-Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
@@ -87,11 +103,23 @@ const ProjectSection = () => {
 
               {/* Footer */}
               <div className="px-8 pb-8 pt-4 border-t border-dar-neutral-200 dark:border-border">
-                <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider dark:text-muted-foreground">
-                  {project.status === 'Produktiv' ? 'Im produktiven Einsatz' : 
-                   project.status === 'Forschungsprojekt' ? 'Wissenschaftliches Projekt' : 
-                   'Experimenteller Aufbau'}
-                </div>
+                {project.url ? (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs text-dar-primary font-mono uppercase tracking-wider hover:text-dar-accent transition-colors dark:text-foreground dark:hover:text-dar-accent"
+                  >
+                    {project.url.replace(/^https?:\/\//, "")}
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                ) : (
+                  <div className="text-xs text-dar-neutral-800 font-mono uppercase tracking-wider dark:text-muted-foreground">
+                    {project.status === 'Produktiv' ? 'Im produktiven Einsatz' :
+                     project.status === 'Forschungsprojekt' ? 'Wissenschaftliches Projekt' :
+                     'Experimenteller Aufbau'}
+                  </div>
+                )}
               </div>
             </div>
           ))}

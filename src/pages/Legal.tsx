@@ -1,22 +1,6 @@
-import { ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
-
 const Legal = () => {
   return (
-    <div className="min-h-screen bg-background dark:bg-background">
-      {/* Navigation */}
-      <nav className="py-6 border-b border-dar-neutral-200 dark:border-border">
-        <div className="container mx-auto">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-dar-primary hover:text-dar-accent transition-colors font-mono text-sm dark:text-dar-neutral-100 dark:hover:text-dar-accent"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Zurück zur Startseite
-          </Link>
-        </div>
-      </nav>
-
+    <main className="min-h-screen bg-background dark:bg-background">
       <div className="py-16">
         <div className="container mx-auto max-w-4xl">
           {/* Page Header */}
@@ -49,7 +33,7 @@ const Legal = () => {
 
                   <div>
                     <h3 className="font-medium text-dar-primary mb-2 dark:text-foreground">Kontakt</h3>
-                    <p className="leading-relaxed dark:text-muted-foreground">E-Mail: kontakt@bakkali.io</p>
+                    <p className="leading-relaxed dark:text-muted-foreground">E-Mail: contact@bakkali.io</p>
                   </div>
 
                   <div>
@@ -122,7 +106,7 @@ const Legal = () => {
                       2. Kontaktaufnahme
                     </h3>
                     <p className="leading-relaxed text-sm dark:text-muted-foreground">
-                      Wenn Sie uns per E‑Mail kontaktieren (z. B. <a href="mailto:kontakt@bakkali.io" className="underline hover:text-dar-accent dark:text-white">kontakt@bakkali.io</a>),
+                      Wenn Sie uns per E‑Mail kontaktieren (z. B. <a href="mailto:contact@bakkali.io" className="underline hover:text-dar-accent dark:text-white">contact@bakkali.io</a>),
                       verarbeiten wir die von Ihnen mitgeteilten Daten zur
                       Bearbeitung Ihrer Anfrage. Die Verarbeitung erfolgt auf Grundlage
                       von Art. 6 Abs. 1 lit. b DSGVO (Erfüllung eines Vertrags/Anfragebearbeitung)
@@ -171,7 +155,7 @@ const Legal = () => {
                       Verarbeitung Ihrer personenbezogenen Daten. Zur Ausübung
                       dieser Rechte oder bei Fragen zur Datenverarbeitung
                       kontaktieren Sie uns bitte per E‑Mail an
-                      <a href="mailto:kontakt@bakkali.io" className="underline ml-1 hover:text-dar-accent dark:text-white">kontakt@bakkali.io</a>.
+                      <a href="mailto:contact@bakkali.io" className="underline ml-1 hover:text-dar-accent dark:text-white">contact@bakkali.io</a>.
                     </p>
                   </div>
 
@@ -197,7 +181,7 @@ const Legal = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
