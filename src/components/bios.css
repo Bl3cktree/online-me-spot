@@ -1,0 +1,674 @@
+
+
+.bios {
+  --bios-blue: #1000c8;
+  --bios-ink: #0b0b2e;
+  --bios-muted: #33335a;
+  --bios-panel: #d4d4d4;
+  --bios-help: #c6c6c6;
+  --bios-line: #8a8a8a;
+  --bios-yellow: #ffe14d;
+  --bios-ok: #55ff55;
+  --bios-load: #ffff55;
+
+  height: 100vh;
+  overflow-y: auto;
+  background: var(--bios-blue);
+  color: var(--bios-ink);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.bios :where(p, h1, h2, dl, dd, ol, ul) {
+  margin: 0;
+}
+
+.bios :where(button) {
+  font: inherit;
+}
+
+.bios a {
+  display: inline-block;
+  padding: 3px 0;
+  color: var(--bios-blue);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.bios a:hover {
+  color: var(--bios-ink);
+}
+
+.bios :focus-visible {
+  outline: 3px solid #0b0b10;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--bios-yellow);
+}
+
+.bios button:focus-visible {
+  outline-offset: -3px;
+  box-shadow: inset 0 0 0 6px var(--bios-yellow);
+}
+
+.bios-tall {
+  position: relative;
+}
+
+.bios-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.bios-wrap {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bios-hero {
+  padding: 16px 4px 32px;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px 48px;
+}
+
+.bios-wm {
+  font-family: "Departure Mono", ui-monospace, monospace;
+  font-size: 44px;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .bios-wm {
+    font-size: 66px;
+  }
+}
+
+.bios-dot {
+  color: var(--bios-yellow);
+}
+
+.bios-post {
+  flex: 0 1 400px;
+  min-width: 0;
+  font-size: clamp(13px, 3.4vw, 16px);
+  line-height: 1.75;
+}
+
+.bios-post p {
+  white-space: pre;
+}
+
+.bios-ok,
+.bios-load {
+  font-weight: 600;
+}
+
+.bios-ok {
+  color: var(--bios-ok);
+}
+
+.bios-load {
+  color: var(--bios-load);
+}
+
+.bios-panel {
+  border: 2px solid #fff;
+  background: var(--bios-panel);
+}
+
+.bios-head {
+  background: var(--bios-blue);
+  color: #fff;
+  padding: 8px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  border-bottom: 2px solid #fff;
+}
+
+.bios-head h1 {
+  font-family: "Departure Mono", ui-monospace, monospace;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.bios-role {
+  font-size: 16px;
+}
+
+.bios-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  background: var(--bios-help);
+  border-bottom: 2px solid var(--bios-line);
+  padding: 0 8px;
+}
+
+.bios-tab {
+  flex: 0 0 auto;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-weight: 600;
+  font-size: 17px;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  color: var(--bios-blue);
+}
+
+.bios-tab[aria-current="true"] {
+  background: var(--bios-blue);
+  color: #fff;
+}
+
+.bios-viewport {
+  overflow: hidden;
+}
+
+.bios-track {
+  display: flex;
+  width: 500%;
+  will-change: transform;
+}
+
+.bios-slide {
+  width: 20%;
+  display: flex;
+  height: calc(100vh - 460px);
+  min-height: 320px;
+  max-height: 620px;
+}
+
+.bios-main,
+.bios-help {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  box-sizing: border-box;
+  scrollbar-color: var(--bios-blue) var(--bios-help);
+}
+
+.bios-main {
+  flex: 999 1 560px;
+  min-width: 0;
+  padding: 28px 28px 36px;
+}
+
+.bios-help {
+  flex: 1 1 280px;
+  min-width: 0;
+  padding: 28px;
+  background: var(--bios-help);
+  border-left: 2px solid var(--bios-line);
+}
+
+.bios-step,
+.bios-h2,
+.bios-num {
+  font-family: "Departure Mono", ui-monospace, monospace;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.bios-step {
+  margin-bottom: 16px;
+  color: var(--bios-muted);
+}
+
+.bios-h2 {
+  margin: 32px 0 12px;
+  color: var(--bios-blue);
+}
+
+.bios-h2.is-first {
+  margin-top: 0;
+}
+
+.bios-help .bios-h2 {
+  margin: 0 0 12px;
+}
+
+.bios-lead {
+  font-size: 20px;
+  line-height: 1.55;
+  max-width: 30em;
+}
+
+.bios-text {
+  max-width: 32em;
+}
+
+.bios-mut {
+  color: var(--bios-muted);
+}
+
+.bios-strong {
+  color: var(--bios-blue);
+  font-weight: 600;
+}
+
+.bios-mut-inline {
+  color: var(--bios-muted);
+  font-weight: 400;
+}
+
+.bios-dl,
+.bios-rows {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bios-dl {
+  gap: 14px;
+}
+
+.bios-rows {
+  gap: 10px;
+}
+
+.bios-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}
+
+.bios-row > :first-child {
+  flex: 0 0 200px;
+  color: var(--bios-muted);
+}
+
+.bios-row > :last-child {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.bios-dl dd {
+  color: var(--bios-blue);
+  font-weight: 600;
+}
+
+.bios-soon {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 0 6px;
+  background: var(--bios-blue);
+  color: var(--bios-yellow);
+  font-weight: 600;
+  line-height: 1.4;
+  vertical-align: baseline;
+}
+
+.bios-lab {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bios-boot {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.bios-boot > li {
+  display: flex;
+  gap: 20px;
+}
+
+.bios-boot > li > div {
+  min-width: 0;
+}
+
+.bios-num {
+  flex: 0 0 auto;
+  color: var(--bios-blue);
+}
+
+.bios-sub {
+  margin-top: 4px;
+}
+
+.bios-keys {
+  border-top: 2px solid #fff;
+  background: var(--bios-blue);
+  color: #fff;
+  padding: 6px 8px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+.bios-key {
+  background: none;
+  border: 0;
+  color: #fff;
+  min-height: 44px;
+  padding: 0 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bios .bios-key-mail {
+  display: inline-flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  min-height: 44px;
+  padding: 0 10px;
+  margin-left: auto;
+}
+
+.bios .bios-key-mail:hover {
+  color: #fff;
+}
+
+.bios-cap {
+  background: var(--bios-panel);
+  color: var(--bios-blue);
+  font-weight: 600;
+  padding: 2px 8px;
+}
+
+.bios-key-mail .bios-cap {
+  margin-right: 8px;
+}
+
+.bios-klong {
+  margin-left: 0.5em;
+}
+
+.bios-mhint {
+  display: none;
+}
+
+.bios-foot {
+  margin: 16px 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.bios-foot p {
+  font-size: 15px;
+  color: #fff;
+}
+
+.bios .bios-foot a {
+  color: #fff;
+  font-weight: 400;
+}
+
+.bios-mono {
+  flex: 0 0 auto;
+  display: block;
+  width: 56px;
+  height: 56px;
+  border: 2px solid #fff;
+  background: var(--bios-blue);
+}
+
+.bios-mono svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  shape-rendering: crispEdges;
+}
+
+.bios.bios-page {
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+}
+
+.bios-page-wrap {
+  padding: 24px 16px 32px;
+  box-sizing: border-box;
+}
+
+.bios-hero-sub {
+  padding-bottom: 24px;
+}
+
+.bios .bios-home {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0;
+}
+
+.bios .bios-home:hover {
+  color: #fff;
+}
+
+.bios-legal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.bios-col {
+  min-width: 0;
+  padding: 28px 28px 36px;
+}
+
+.bios-col + .bios-col {
+  background: var(--bios-help);
+  border-left: 2px solid var(--bios-line);
+}
+
+.bios-h3 {
+  margin: 24px 0 6px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--bios-blue);
+}
+
+.bios-h2 + .bios-h3 {
+  margin-top: 0;
+}
+
+.bios-col p {
+  max-width: 40em;
+}
+
+.bios-stand {
+  margin-top: 28px;
+  padding-top: 12px;
+  border-top: 2px solid var(--bios-line);
+  font-size: 15px;
+  color: var(--bios-muted);
+}
+
+.bios-error {
+  padding: 28px 28px 36px;
+}
+
+.bios-error p + p {
+  margin-top: 12px;
+}
+
+.bios .bios-key-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  min-height: 44px;
+  padding: 0 8px;
+}
+
+.bios .bios-key-link:hover {
+  color: #fff;
+}
+
+@keyframes bios-in-r {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes bios-in-l {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.bios-anim-r {
+  animation: bios-in-r 260ms ease-out;
+}
+
+.bios-anim-l {
+  animation: bios-in-l 260ms ease-out;
+}
+
+@media (max-width: 1023px) {
+  .bios-legal {
+    grid-template-columns: 1fr;
+  }
+
+  .bios-col {
+    padding: 24px 20px 32px;
+  }
+
+  .bios-col + .bios-col {
+    border-left: 0;
+    border-top: 2px solid var(--bios-line);
+  }
+
+  .bios-page-wrap {
+    padding: 16px 8px 24px;
+  }
+
+  .bios {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .bios-stage {
+    position: static;
+    height: auto;
+    padding: 16px 8px;
+  }
+
+  .bios-tabs {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 0 4px;
+  }
+
+  .bios-tab {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .bios-viewport {
+    touch-action: pan-y;
+  }
+
+  .bios-track {
+    display: block;
+    width: auto;
+    transform: none !important;
+  }
+
+  .bios-slide {
+    width: auto;
+    height: auto;
+    min-height: 60vh;
+    max-height: none;
+  }
+
+  .bios-slide[data-hidden="true"] {
+    display: none;
+  }
+
+  .bios-main {
+    overflow: visible;
+    padding: 24px 20px 32px;
+  }
+
+  .bios-help {
+    display: none;
+  }
+
+  .bios-mhint {
+    display: block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--bios-muted);
+    border-top: 2px solid var(--bios-line);
+    background: var(--bios-help);
+  }
+
+  .bios-keys {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bios-keys > * {
+    justify-content: flex-start;
+    text-align: left;
+    margin: 0 !important;
+  }
+
+  .bios-cap {
+    display: none;
+  }
+
+  .bios-klong {
+    display: none;
+  }
+
+  .bios-mono {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bios-anim-r,
+  .bios-anim-l {
+    animation: none;
+  }
+}

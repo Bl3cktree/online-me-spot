@@ -1,17 +1,5 @@
-import IntroSection from "@/components/IntroSection";
-import CVSection from "@/components/CVSection";
-import ProjectSection from "@/components/ProjectSection";
-import FooterSection from "@/components/FooterSection";
+import BiosSetup from "@/components/BiosSetup";
 
-const Index = () => {
-  return (
-    <main className="min-h-screen">
-      <IntroSection />
-      <CVSection />
-      <ProjectSection />
-      <FooterSection />
-    </main>
-  );
-};
+const Index = () => <BiosSetup />;
 
 export default Index;

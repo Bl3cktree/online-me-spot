@@ -26,13 +26,13 @@ npm run lint     # ESLint
 ```
 src/
   pages/         Index (Startseite), Legal (Impressum/Datenschutz), NotFound
-  components/    IntroSection, CVSection, ProjectSection, FooterSection, Navbar
+  components/    BiosSetup (Startseite im BIOS-Stil) mit bios.css
   components/ui/ shadcn/ui-Komponenten
   index.css      Design-Tokens (CSS-Variablen, Light + Dark)
 ```
 
-Seiteninhalt (Werdegang, Skills, Projekte, Kontakt) steht als Daten in den jeweiligen
-Section-Komponenten unter `src/components/`.
+Seiteninhalt (Start, System, Projekte, Boot, Kontakt) steht in
+`src/components/BiosSetup.tsx`. Schriften liegen lokal unter `public/fonts/`.
 
 ## Deployment
 

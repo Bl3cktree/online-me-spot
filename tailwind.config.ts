@@ -23,8 +23,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'Menlo', 'Monaco', 'monospace'],
+				sans: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
+				mono: ['"IBM Plex Mono"', 'Menlo', 'Monaco', 'monospace'],
+				display: ['"Departure Mono"', 'ui-monospace', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

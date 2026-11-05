@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#1a202c" />
-  <text x="16" y="23" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="20" font-weight="500" fill="#48bb78">B</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges"><rect width="16" height="16" fill="#1000C8"/><path fill="#FFFFFF" d="M0 0h16v1H0zM0 15h16v1H0zM0 1h1v14H0zM15 1h1v14h-1zM2 2h2v12H2zM4 6h5v2H4zM9 7h1v1H9zM9 8h2v4H9zM4 12h5v2H4zM9 12h1v1H9z"/><path fill="#FFE14D" d="M12 12h2v2h-2z"/></svg>

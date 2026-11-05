@@ -2,7 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design System "Dar EL Fikra" für bakkali.io - Tech-orientiert & Minimalistisch */
+@font-face {
+  font-family: "Departure Mono";
+  src: url("/fonts/DepartureMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBMPlexMono-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {
@@ -34,15 +56,13 @@
     --input: 214 32% 91%;
     --ring: 159 69% 52%;
 
-    /* Dar EL Fikra Palette */
-    --dar-primary: 210 22% 15%;      /* #1a202c */
-    --dar-accent: 159 69% 52%;       /* #48bb78 */
-    --dar-neutral-50: 210 40% 98%;   /* #f7fafc */
-    --dar-neutral-100: 220 14% 93%;  /* #edf2f7 */
-    --dar-neutral-200: 218 11% 85%;  /* #e2e8f0 */
-    --dar-neutral-800: 215 25% 27%;  /* #2d3748 */
+    --dar-primary: 210 22% 15%;
+    --dar-accent: 159 69% 52%;
+    --dar-neutral-50: 210 40% 98%;
+    --dar-neutral-100: 220 14% 93%;
+    --dar-neutral-200: 218 11% 85%;
+    --dar-neutral-800: 215 25% 27%;
 
-    /* Tech-Design Shadows */
     --shadow-minimal: 0 1px 3px 0 hsl(0 0% 0% / 0.08);
     --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
     --shadow-focus: 0 0 0 3px hsl(159 69% 52% / 0.1);
@@ -103,7 +123,6 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Dar EL Fikra palette overrides for dark mode */
     --dar-primary: 210 40% 98%;
     --dar-accent: 159 69% 52%;
     --dar-neutral-50: 240 5.9% 10%;
@@ -119,6 +138,6 @@
   }
 
   body {
-    @apply pt-14 bg-background text-foreground;
+    @apply bg-background text-foreground;
   }
 }
