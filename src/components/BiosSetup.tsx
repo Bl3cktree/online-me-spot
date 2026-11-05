@@ -14,6 +14,7 @@ const V_PAGE = true;
 
 const WHEEL_LOCK_MS = 750;
 const WHEEL_TAIL_MS = 250;
+const EDGE_HOLD_MS = 400;
 const SNAP_DELAY_MS = 140;
 const SNAP_THRESHOLD = 0.08;
 const SWIPE_X_PX = 50;
@@ -46,6 +47,7 @@ const BiosSetup = () => {
   const snapTimer = useRef<number>();
   const lockUntil = useRef(0);
   const lastWheel = useRef(0);
+  const lastInner = useRef(0);
   const touch = useRef<{ x: number; y: number; atTop: boolean; atBottom: boolean } | null>(null);
 
   const cur = desk ? Math.round(pos) : idx;
@@ -119,21 +121,37 @@ const BiosSetup = () => {
       if (Math.abs(dy) < 2) return;
       const d = dy > 0 ? 1 : -1;
 
-      const pane =
-        e.target instanceof Element ? e.target.closest<HTMLElement>(".bios-main, .bios-help") : null;
-      if (pane && pane.scrollHeight > pane.clientHeight + 1) {
-        const canScroll =
-          d > 0 ? pane.scrollTop + pane.clientHeight < pane.scrollHeight - 1 : pane.scrollTop > 0;
-        if (canScroll) return;
-      }
-
-      e.preventDefault();
       const now = Date.now();
       const gap = now - lastWheel.current;
       lastWheel.current = now;
 
       if (now < lockUntil.current) {
+        e.preventDefault();
         if (gap < WHEEL_TAIL_MS) lockUntil.current = Math.max(lockUntil.current, now + WHEEL_TAIL_MS);
+        return;
+      }
+
+      const hovered =
+        e.target instanceof Element ? e.target.closest<HTMLElement>(".bios-main, .bios-help") : null;
+      const pane =
+        hovered ?? s.querySelector<HTMLElement>(`#bereich-${settled.current} .bios-main`);
+      if (pane && pane.scrollHeight > pane.clientHeight + 1) {
+        const canScroll =
+          d > 0 ? pane.scrollTop + pane.clientHeight < pane.scrollHeight - 1 : pane.scrollTop > 0;
+        if (canScroll) {
+          lastInner.current = now;
+          if (!hovered) {
+            e.preventDefault();
+            const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? pane.clientHeight : 1;
+            pane.scrollBy({ top: dy * unit });
+          }
+          return;
+        }
+      }
+
+      e.preventDefault();
+      if (now - lastInner.current < EDGE_HOLD_MS) {
+        lastInner.current = now;
         return;
       }
       const target = clamp(settled.current + d);
